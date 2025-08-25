@@ -7,6 +7,27 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    
+    <header><h1>Array Manipulation</h1></header>
+    <main>
+       <h2>numbers</h2>
+        <p>This is the original array:</p>
+        <code>const numbers = [1, 2, 3, 4, 5];</code>
+        <p>It contains the numbers 1 through 5.</p>
+
+        <h2>reversed</h2>
+        <p>This array is created by calling numbers.reverse().</p>
+        <p>The reverse() method reverses the order of the elements in the array in place.</p>
+        <p>After this, numbers itself is now [5, 4, 3, 2, 1], and reversed points to the same array (since reverse() mutates the original array and returns it).</p>
+        <h2>filtered</h2>
+        <p>This array is created by calling numbers.filter(num => num > 2).</p>
+        <p>The filter() method creates a new array containing only elements that pass the test (num > 2).</p>
+        <p>Since numbers is now [5, 4, 3, 2, 1] (already reversed), filtered will be [5, 4, 3] (all numbers greater than 2).</p>
+        <h2>Summary:</h2>
+        <p>
+        numbers starts as [1, 2, 3, 4, 5], but is reversed to [5, 4, 3, 2, 1].
+        reversed is the same as the reversed numbers array.
+        filtered contains only the values from the reversed array that are greater than 2: [5, 4, 3].
+        </p>
+    </main>
 </body>
 </html>
