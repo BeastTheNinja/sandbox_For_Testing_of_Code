@@ -10,8 +10,9 @@ console.log('Reversed:', reversed);
 const filtered = numbers.filter(num => num > 2);
 console.log('Filtered:', filtered);
 
-
+// numbers
 // This is the original array:
+// const numbers = [1, 2, 3, 4, 5];
 // It contains the numbers 1 through 5.
 
 // reversed
