@@ -20,6 +20,7 @@
         <p>After this, numbers itself is now [5, 4, 3, 2, 1], and reversed points to the same array (since reverse() mutates the original array and returns it).</p>
         <h2>filtered</h2>
         <p>This array is created by calling numbers.filter(num => num > 2).</p>
+        <p>the parameter num => num > 2 is an arrow function. For each element in the numbers array, num represents the current value. The function returns true if num is greater than 2, and false otherwise. Only elements for which the function returns true are included in the filtered array.</p>
         <p>The filter() method creates a new array containing only elements that pass the test (num > 2).</p>
         <p>Since numbers is now [5, 4, 3, 2, 1] (already reversed), filtered will be [5, 4, 3] (all numbers greater than 2).</p>
         <h2>Summary:</h2>
