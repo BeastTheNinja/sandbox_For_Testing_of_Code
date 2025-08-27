@@ -44,3 +44,56 @@
         document.body.style.backgroundColor = colorInput.value;
     });
 
+
+
+   
+// Gemmer hver bruger for sig selv i localStorage med sin egen key.
+// Fx:
+// localStorage.setItem("user1", JSON.stringify({name: "Alice", age: 20, color: "red"}));
+// localStorage.setItem("user2", JSON.stringify({name: "Bob", age: 25, color: "blue"}));
+
+
+// Når man vælger en bruger i userSelect, hentes kun den ene key direkte:
+
+// const userData = JSON.parse(localStorage.getItem(selectedUser));
+
+
+// Det betyder, at der ligger flere adskilte entries i localStorage (én per bruger).
+
+// Eksempel på localStorage med original kode:
+
+// "user1": "{...}"
+// "user2": "{...}"
+// "user3": "{...}"
+
+// Ny kode 
+
+// Gemmer alle brugere under én samlet key "users".
+// Her ligger et objekt med alle brugere indeni.
+// Fx:
+
+// {
+//   "user1": { "name": "Alice", "age": "20", "color": "#ff0000" },
+//   "user2": { "name": "Bob", "age": "25", "color": "#00ff00" },
+//   "user3": { "name": "", "age": "", "color": "" },
+//   "user4": { "name": "", "age": "", "color": "" }
+// }
+
+
+// Når man vælger en bruger i userSelect, slår koden op i objektet "users" i stedet for i en separat key.
+
+// let users = JSON.parse(localStorage.getItem("users")) || {};
+// const userData = users[selectedUser];
+
+
+// Når man gemmer, opdateres kun den ene bruger i objektet, og hele objektet overskrives i localStorage.
+
+// Eksempel på localStorage med ny kode:
+
+// "users": "{ user1: {...}, user2: {...}, user3: {...}, user4: {...} }"
+
+// Kort sagt
+
+// Original kode → én localStorage-key pr. bruger.
+
+// Ny kode → én samlet localStorage-key, der indeholder alle brugere.
